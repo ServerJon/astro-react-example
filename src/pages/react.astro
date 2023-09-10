@@ -1,0 +1,28 @@
+---
+import  Layout  from "../layouts/Layout.astro";
+import { ChildComponent, Counter, ParentComponent } from "../components";
+---
+
+<Layout title="Welcome to Astro.">
+    <section>
+        <h2>Components with React only</h2>
+    
+        <Counter client:visible/>
+    </section>
+    <section>
+        <h2>Parent component without logic but with two components</h2>
+
+        <ParentComponent client:load/>
+    </section>
+    <section>
+        <h2>Child component without logic</h2>
+
+        <ChildComponent />
+    </section>
+</Layout>
+
+<style>
+    h2 {
+        color: white;
+    }
+</style>

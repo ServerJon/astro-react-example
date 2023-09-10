@@ -1,0 +1,18 @@
+---
+import  Layout  from "../layouts/Layout.astro";
+import { MaterialButton, MaterialTabs } from "../components";
+---
+
+<Layout title="Welcome to Astro.">
+    <h2>Some component with material MUI with React</h2>
+    <h3>Material Button</h3>
+    <MaterialButton client:visible/>
+    <h3>Material Tabs</h3>
+    <MaterialTabs client:visible/>
+</Layout>
+
+<style>
+    h2, h3 {
+        color: white;
+    }
+</style>
